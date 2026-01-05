@@ -110,9 +110,10 @@
   }
 
   .first_container {
+    padding-top: 80px;
     background-color: #000;
     color: white;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
   }
@@ -189,4 +190,93 @@
   .btn_discover:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .review_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 80px 10%;
+    gap: 80px;
+    background-color: #ffffff;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .author_card {
+    flex: 1;
+    max-width: 450px;
+  }
+
+  .author_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+
+  .author_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .author_info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  .author_info span {
+    font-family: 'Smooch Sans', sans-serif;
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  .author_text {
+    line-height: 1.6;
+    color: #444;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .review_card {
+    flex: 1;
+    max-width: 450px;
+  }
+
+  .rating_stars {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: #000;
+  }
+
+  .review_quote {
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+    color: #1a1a1a;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .reviewer_info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+  }
+
+  .reviewer_img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+
+  .reviewer_handle {
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
   }
