@@ -1,0 +1,192 @@
+  @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Smooch Sans", sans-serif;
+    line-height: 1;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #FFFFFF;
+  }
+
+  .navbar {
+    background-color: #252A30;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+  }
+
+  .nav_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .left_side,
+  .right_side,
+  .search_container {
+    display: flex;
+    align-items: center;
+  }
+
+  .left_side,
+  .right_side {
+    gap: 20px;
+  }
+
+  .left_side li,
+  .right_side li {
+    list-style: none;
+  }
+
+  .search_container {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    padding: 6px 15px;
+    width: 40%;
+    max-width: 500px;
+    transition: background-color 0.3s ease;
+  }
+
+  .search_container:focus-within {
+    background-color: #383f47;
+    outline: 1px solid #ffffff44;
+  }
+
+  .search_input {
+    font-family: "Smooch Sans", sans-serif;
+    background: none;
+    border: none;
+    color: white;
+    padding: 4px;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .search_input:focus {
+    outline: none;
+  }
+
+  .search_input::placeholder {
+    color: #a0a0a0;
+  }
+
+  .search_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+  }
+
+  .search_btn:hover {
+    opacity: 1;
+  }
+
+  .nav_list img {
+    height: 24px;
+    width: auto;
+    display: block;
+  }
+
+  div li a img {
+    height: 30px !important;
+  }
+
+  .logo {
+    height: 45px !important;
+  }
+
+  .first_container {
+    background-color: #000;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 120px;
+    padding: 2rem 2rem;
+  }
+
+  .banner_image {
+    flex: 1;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  .banner_image img {
+    width: 100%;
+    height: auto;
+    /*filter: drop-shadow(0 20px 50px rgba(255, 255, 255, 0.1));*/
+  }
+
+  .banner_content {
+    flex: 1.2;
+    max-width: 1600px;
+  }
+
+  .category {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .slogan {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn_discover {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    transition: transform 0.3s ease;
+  }
+
+  .btn_discover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
