@@ -20,6 +20,7 @@
     padding: 10px 0;
     width: 100%;
     position: fixed;
+    z-index: 999;
   }
 
   .nav_list {
@@ -67,7 +68,7 @@
     font-family: "Smooch Sans", sans-serif;
     background: none;
     border: none;
-    color: white;
+    color: #252A30;
     padding: 4px;
     width: 100%;
     font-size: 1.2rem;
@@ -110,12 +111,15 @@
   }
 
   .first_container {
-    padding-top: 80px;
+    padding-top: 100px;
+    min-height: 100vh;
     background-color: #000;
     color: white;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
   .banner {
@@ -123,14 +127,57 @@
     align-items: center;
     justify-content: center;
     max-width: 1200px;
-    margin: 0 120px;
-    padding: 2rem 2rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
   }
 
   .banner_image {
     flex: 1;
-    max-width: 450px;
+    max-width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    position: relative;
+  }
+
+  .book-main {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .book-main:hover {
+    transform: scale(1.02);
+  }
+
+  .nav_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+  }
+
+  .nav_arrow img {
+    width: 40px;
+    filter: brightness(0) invert(1);
+  }
+
+  .prev {
+    left: -60px;
+  }
+
+  .next {
+    right: -800px;
   }
 
   .banner_image img {
@@ -154,7 +201,7 @@
 
   h1 {
     font-family: "Playfair Display", serif;
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     font-weight: 700;
     font-style: normal;
     line-height: 1.1;
