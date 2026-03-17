@@ -76,6 +76,7 @@
 
   .search_input:focus {
     outline: none;
+    color: #FFF
   }
 
   .search_input::placeholder {

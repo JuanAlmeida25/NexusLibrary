@@ -95,11 +95,11 @@ function reiniciarIntervalo() {
 
 window.addEventListener('blur', () => {
     clearTimeout(temporizador);
-    document.title = "¡Vuelve por favor! 🥺";
+    document.title = "¡Vuelve por favor!";
 });
 
 window.addEventListener('focus', () => {
-    document.title = "¡Gracias por volver! 😊";
+    document.title = "¡Gracias por volver!";
 
     temporizador = setTimeout(() => {
         document.title = tituloOriginal;
