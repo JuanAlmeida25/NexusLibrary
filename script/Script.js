@@ -95,7 +95,7 @@ function reiniciarIntervalo() {
 
 window.addEventListener('blur', () => {
     clearTimeout(temporizador);
-    document.title = "¡Vuelve por favor! 🥺";
+    document.title = "¡Vuelve por favor!";
 });
 
 window.addEventListener('focus', () => {
