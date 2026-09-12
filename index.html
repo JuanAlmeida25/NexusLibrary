@@ -20,8 +20,8 @@
     <nav>
       <ul class="nav_list">
         <div class="left_side">
-          <li><a href=""><img src="src/Menu.svg" alt=""></a></li>
-          <li><a href=""><img class="logo" src="src/Logo_Nexus.svg" alt=""></a></li>
+          <a href=""><img src="src/Menu.svg" alt=""></a>
+          <a href=""><img class="logo" src="src/Logo_Nexus.svg" alt=""></a>
         </div>
 
         <div class="search_container">
@@ -58,6 +58,12 @@
         <a href="#" class="btn_discover">Descúbrelo</a>
       </div>
   </section>
+
+  <section class="got_universe_section" style="background-color: #ffffff; padding: 40px 0;">
+    <div class="saga_title" style="text-align: center; margin-bottom: 50px;">
+      <h2 style="font-family: 'Boska Variable', 'Boska', serif; font-size: 3.5rem; font-weight: 700; color: #1a1a1a; margin: 0;">El Mundo de Juego de Tronos</h2>
+    </div>
+
   <section class="review_section">
     <div class="author_card">
       <div class="author_header">
@@ -71,18 +77,116 @@
         incluye Un juego de tronos y Un choque de reyes...</p>
     </div>
 
-    <div class="review_card">
-      <div class="rating_stars">★★★★☆</div>
-      <blockquote class="review_quote">
-        "Es la obra maestra de la saga. Un libro frenético donde las conspiraciones políticas finalmente estallan en
-        giros brutales e inesperados..."
-      </blockquote>
-      <div class="reviewer_info">
-        <img src="src/UserProfile.svg" alt="User" class="reviewer_img">
-        <span class="reviewer_handle">@ValyrianReader99</span>
+    <div class="review_carousel" style="flex: 1; max-width: 450px; overflow: hidden;">
+      <div class="review_track" id="reviewTrack" style="display: flex;">
+        <div class="review_card" style="flex: 0 0 100%;">
+          <div class="rating_stars">★★★★★ <span style="font-size: 1rem; color: #888">- Tormenta de Espadas</span></div>
+          <blockquote class="review_quote">
+            "Es la obra maestra de la saga. Un libro frenético donde las conspiraciones políticas finalmente estallan en giros brutales e inesperados..."
+          </blockquote>
+          <div class="reviewer_info">
+            <img src="src/UserProfile.svg" alt="User" class="reviewer_img">
+            <span class="reviewer_handle">@ValyrianReader99</span>
+          </div>
+        </div>
+        <div class="review_card" style="flex: 0 0 100%;">
+          <div class="rating_stars">★★★★☆ <span style="font-size: 1rem; color: #888">- Festín de Cuervos</span></div>
+          <blockquote class="review_quote">
+            "Una exploración profunda y oscura de las secuelas de la guerra. Un ritmo más pausado pero con diálogos excepcionales."
+          </blockquote>
+          <div class="reviewer_info">
+            <img src="src/UserProfile.svg" alt="User" class="reviewer_img">
+            <span class="reviewer_handle">@IronBorn</span>
+          </div>
+        </div>
+        <div class="review_card" style="flex: 0 0 100%;">
+          <div class="rating_stars">★★★★★ <span style="font-size: 1rem; color: #888">- Danza de Dragones</span></div>
+          <blockquote class="review_quote">
+            "La trama se vuelve más compleja y los dragones finalmente toman el protagonismo que merecen. Una lectura épica."
+          </blockquote>
+          <div class="reviewer_info">
+            <img src="src/UserProfile.svg" alt="User" class="reviewer_img">
+            <span class="reviewer_handle">@DragonRider</span>
+          </div>
+        </div>
+        <div class="review_card" style="flex: 0 0 100%;">
+          <div class="rating_stars">★★★★★ <span style="font-size: 1rem; color: #888">- Juego de Tronos</span></div>
+          <blockquote class="review_quote">
+            "Un comienzo magistral para una saga épica. La intriga política y los personajes están perfectamente construidos."
+          </blockquote>
+          <div class="reviewer_info">
+            <img src="src/UserProfile.svg" alt="User" class="reviewer_img">
+            <span class="reviewer_handle">@StarkFan</span>
+          </div>
+        </div>
+        <div class="review_card" style="flex: 0 0 100%;">
+          <div class="rating_stars">★★★★☆ <span style="font-size: 1rem; color: #888">- Choque de Reyes</span></div>
+          <blockquote class="review_quote">
+            "La guerra de los cinco reyes expande el universo de forma brillante. Cada capítulo es una sorpresa y mantiene la tensión."
+          </blockquote>
+          <div class="reviewer_info">
+            <img src="src/UserProfile.svg" alt="User" class="reviewer_img">
+            <span class="reviewer_handle">@KingInTheNorth</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <div class="carousel_wrapper">
+    <div class="carousel_track" id="carouselTrack">
+      <div class="carousel_item">
+        <img src="src/bookCovers/aGameOfThrone.svg" alt="Juego de Tronos">
+        <div class="carousel_info">
+          <h4>Juego de Tronos</h4>
+          <p>George R. R. Martin</p>
+        </div>
+      </div>
+      <div class="carousel_item">
+        <img src="src/bookCovers/aClashOfKings.svg" alt="Choque de Reyes">
+        <div class="carousel_info">
+          <h4>Choque de Reyes</h4>
+          <p>George R. R. Martin</p>
+        </div>
+      </div>
+      <div class="carousel_item">
+        <img src="src/bookCovers/aStormOfSword.svg" alt="Tormenta de Espadas">
+        <div class="carousel_info">
+          <h4>Tormenta de Espadas</h4>
+          <p>George R. R. Martin</p>
+        </div>
+      </div>
+      <div class="carousel_item">
+        <img src="src/bookCovers/aFeastForCrows.svg" alt="Festín de Cuervos">
+        <div class="carousel_info">
+          <h4>Festín de Cuervos</h4>
+          <p>George R. R. Martin</p>
+        </div>
+      </div>
+      <div class="carousel_item">
+        <img src="src/bookCovers/aDanceWithDragon.svg" alt="Danza de Dragones">
+        <div class="carousel_info">
+          <h4>Danza de Dragones</h4>
+          <p>George R. R. Martin</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="discount_section">
+    <div class="discount_banner">
+      <div class="discount_content">
+        <h2 class="discount_title">Mes de la Fantasía Épica</h2>
+        <p class="discount_text">Aprovecha un <strong>30% de descuento</strong> en toda nuestra colección de fantasía. Explora mundos mágicos, dragones y batallas épicas.</p>
+        <a href="#" class="btn_discount">Explorar ofertas</a>
+      </div>
+      <div class="discount_image">
+        <img src="src/Asset.svg" alt="Oferta Fantasía" class="discount_img">
+      </div>
+    </div>
+  </section>
+
 </body>
 
 </html>

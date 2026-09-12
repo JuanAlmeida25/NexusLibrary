@@ -1,5 +1,14 @@
-  @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Smooch+Sans:wght@100..900&display=swap');
+  @import url('https://api.fontshare.com/v2/css?f[]=boska@1&display=swap');
+
+  @font-face {
+    font-family: 'Monaspace Argon Frozen';
+    src: local('Monaspace Argon Frozen'), url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/Web%20Fonts/Static%20Web%20Fonts/Monaspace%20Argon/MonaspaceArgon-Regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Monaspace Krypton Frozen';
+    src: local('Monaspace Krypton Frozen'), url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/Web%20Fonts/Static%20Web%20Fonts/Monaspace%20Krypton/MonaspaceKrypton-Regular.woff2') format('woff2');
+  }
 
   * {
     margin: 0;
@@ -8,7 +17,7 @@
   }
 
   body {
-    font-family: "Smooch Sans", sans-serif;
+    font-family: 'Monaspace Argon Frozen', monospace;
     line-height: 1;
     font-weight: 500;
     font-style: normal;
@@ -65,7 +74,7 @@
   }
 
   .search_input {
-    font-family: "Smooch Sans", sans-serif;
+    font-family: 'Monaspace Argon Frozen', monospace;
     background: none;
     border: none;
     color: #252A30;
@@ -200,7 +209,7 @@
   }
 
   h1 {
-    font-family: "Playfair Display", serif;
+    font-family: 'Boska Variable', 'Boska', serif;
     font-size: 3.5rem;
     font-weight: 700;
     font-style: normal;
@@ -243,10 +252,12 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 80px 10%;
-    gap: 80px;
-    background-color: #ffffff;
-    font-family: 'Playfair Display', serif;
+    max-width: 1100px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    gap: 60px;
+    background-color: transparent;
+    font-family: 'Boska Variable', 'Boska', serif;
   }
 
   .author_card {
@@ -275,7 +286,7 @@
   }
 
   .author_info span {
-    font-family: 'Smooch Sans', sans-serif;
+    font-family: 'Monaspace Argon Frozen', monospace;
     color: #666;
     font-size: 1.1rem;
   }
@@ -283,7 +294,7 @@
   .author_text {
     line-height: 1.6;
     color: #444;
-    font-family: 'Smooch Sans', sans-serif;
+    font-family: 'Monaspace Argon Frozen', monospace;
     font-size: 1.2rem;
   }
 
@@ -323,7 +334,321 @@
   }
 
   .reviewer_handle {
-    font-family: 'Smooch Sans', sans-serif;
+    font-family: 'Monaspace Argon Frozen', monospace;
     font-weight: 600;
     font-size: 1.1rem;
   }
+
+  .carousel_wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    background-color: transparent;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel_track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    flex-shrink: 0;
+  }
+
+  .carousel_item {
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0.4;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  .carousel_item.active-book {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .carousel_item img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .carousel_info h4 {
+    font-size: 1.4rem;
+    font-family: 'Monaspace Argon Frozen', monospace;
+    margin-bottom: 8px;
+    color: #222;
+  }
+
+  .carousel_info p {
+    font-size: 0.8rem;
+    font-family: 'Monaspace Argon Frozen', monospace;
+    color: #666;
+  }
+
+/* ========================================================= */
+/* NEW SECTIONS: CATEGORIES, TRENDING, FOOTER                */
+/* ========================================================= */
+
+.categories_section, .trending_section {
+  padding: 60px 10%;
+  text-align: center;
+  background-color: #fcfcfc;
+}
+
+.categories_section h2, .trending_section h2 {
+  font-family: 'Boska Variable', 'Boska', serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+/* Categories Grid */
+.category_grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category_card {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  padding: 10px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.category_card:hover {
+  background-color: #252A30;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Trending / Book Grid */
+.trending_section {
+  background-color: #ffffff;
+}
+
+.book_grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.book_card {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.book_card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.book_card h3 {
+  font-family: 'Boska Variable', 'Boska', serif;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.book_card .author {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.book_card .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.add_to_cart {
+  width: 100%;
+  padding: 10px;
+  background-color: #252A30;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Monaspace Argon Frozen', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add_to_cart:hover {
+  background-color: #000;
+}
+
+/* Footer */
+.main_footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 10% 20px;
+  font-family: 'Monaspace Argon Frozen', monospace;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
+}
+
+.brand_info {
+  max-width: 350px;
+}
+
+.footer_logo {
+  height: 40px;
+  margin-bottom: 15px;
+  filter: brightness(0) invert(1); /* Turns the black logo white */
+}
+
+.brand_info p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+.footer_links h4 {
+  font-family: 'Boska Variable', 'Boska', serif;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.footer_links ul {
+  list-style: none;
+}
+
+.footer_links ul li {
+  margin-bottom: 10px;
+}
+
+.footer_links ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer_links ul li a:hover {
+  color: #fff;
+}
+
+.footer_bottom {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Discount Banner */
+.discount_section {
+  padding: 0px 10%;
+  background-color: #fcfcfc;
+}
+
+.discount_banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  border-radius: 16px;
+  padding: 50px 60px;
+  color: white;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.discount_content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.discount_title {
+  font-family: 'Boska Variable', 'Boska', serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.discount_text {
+  font-family: 'Monaspace Argon Frozen', monospace;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.discount_text strong {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.btn_discount {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #ffd700;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: 'Monaspace Argon Frozen', monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn_discount:hover {
+  background-color: #ffea00;
+  transform: translateY(-3px);
+}
+
+.discount_image {
+  flex: 0 0 250px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.discount_img {
+  width: 100%;
+  max-width: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+  opacity: 0.9;
+}

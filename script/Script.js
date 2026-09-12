@@ -14,7 +14,7 @@ const librosBanner = [
         categoria: "Fantasía Épica / Juego de Tronos",
         titulo: "El invierno se acerca a la biblioteca.",
         descripcion: "Sumérgete en la lucha por el Trono de Hierro donde las traiciones y los dragones marcan el destino de Poniente.",
-        imagen: "src/bookCovers/aGameOfThrones.svg"
+        imagen: "src/bookCovers/aGameOfThrone1.svg"
     },
     {
         categoria: "Misterio / El código Da Vinci",
@@ -99,9 +99,54 @@ window.addEventListener('blur', () => {
 });
 
 window.addEventListener('focus', () => {
-    document.title = "¡Gracias por volver! 😊";
+    document.title = "¡Volviste! 😊";
 
     temporizador = setTimeout(() => {
         document.title = tituloOriginal;
     }, 2000);
 });
+
+// Book and Review Carousel Auto-Scroll
+const carouselTrack = document.getElementById('carouselTrack');
+const reviewTrack = document.getElementById('reviewTrack');
+
+if (carouselTrack && carouselTrack.children.length > 2) {
+    carouselTrack.children[2].classList.add('active-book');
+}
+
+function scrollCarousel() {
+    if (!carouselTrack || carouselTrack.children.length === 0) return;
+    
+    const bookItemWidth = carouselTrack.children[0].offsetWidth + 20;
+    let reviewItemWidth = 0;
+    
+    if (carouselTrack.children.length > 2) {
+        carouselTrack.children[2].classList.remove('active-book');
+        if (carouselTrack.children[3]) {
+            carouselTrack.children[3].classList.add('active-book');
+        }
+    }
+    
+    if (reviewTrack && reviewTrack.children.length > 0) {
+        reviewItemWidth = reviewTrack.children[0].offsetWidth;
+        reviewTrack.style.transition = 'transform 0.5s ease-in-out';
+        reviewTrack.style.transform = `translateX(-${reviewItemWidth}px)`;
+    }
+    
+    carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+    carouselTrack.style.transform = `translateX(-${bookItemWidth}px)`;
+    
+    setTimeout(() => {
+        carouselTrack.style.transition = 'none';
+        carouselTrack.appendChild(carouselTrack.firstElementChild);
+        carouselTrack.style.transform = 'translateX(0)';
+        
+        if (reviewTrack && reviewTrack.children.length > 0) {
+            reviewTrack.style.transition = 'none';
+            reviewTrack.appendChild(reviewTrack.firstElementChild);
+            reviewTrack.style.transform = 'translateX(0)';
+        }
+    }, 500);
+}
+
+setInterval(scrollCarousel, 3000);
